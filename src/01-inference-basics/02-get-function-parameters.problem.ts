@@ -12,7 +12,6 @@ const makeQuery = (
 ) => {};
 
 type MakeQuery = typeof makeQuery;
-
 type MakeQueryParameters = Parameters<MakeQuery>;
 
 type tests = [
