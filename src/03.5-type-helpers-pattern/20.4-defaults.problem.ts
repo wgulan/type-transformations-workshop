@@ -1,6 +1,8 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from '../helpers/type-utils';
 
-type CreateDataShape<TData, TError> = {
+type MaybeError = Error | undefined;
+
+type CreateDataShape<TData, TError extends MaybeError = undefined> = {
   data: TData;
   error: TError;
 };
@@ -23,5 +25,5 @@ type tests = [
         error: SyntaxError;
       }
     >
-  >,
+  >
 ];
